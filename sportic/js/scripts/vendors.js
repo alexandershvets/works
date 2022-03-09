@@ -1,0 +1,5 @@
+@@include('vendor/smoothScroll.js', {})
+@@include('vendor/inputmask.min.js', {})
+@@include('vendor/swiper.min.js', {})
+@@include('vendor/nouislider.js', {})
+@@include('vendor/wNumb.min.js', {})

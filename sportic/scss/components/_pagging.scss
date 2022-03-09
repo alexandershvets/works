@@ -1,0 +1,50 @@
+.pagging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // .pagging__arrow
+  &__arrow {
+    &::before {
+      font-size: 22px;
+      color: darken($accent_third, 5%);
+    }
+    &:first-child {
+    }
+    &:last-child {
+    }
+    &._active {
+      &::before {
+        color: $accent_second;
+      }
+    }
+  }
+  // .pagging__list
+  &__list {
+    display: flex;
+    margin: 0 20px;
+    li {
+      margin-right: 4px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  // .pagging__item
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    margin-right: 4px;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 18px;
+    color: #333;
+    background-color: transparent;
+    transition: background-color .25s ease 0s;
+    &._active {
+      background-color: $accent_second;
+    }
+  }
+}
