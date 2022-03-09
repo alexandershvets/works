@@ -1,0 +1,41 @@
+.footer
+	// .footer__body
+	&__body
+	
+	// .footer__text
+	&__text
+		color: #4d4d4d
+		font-size: 15px
+		line-height: 25px
+		a
+			color: #4d4d4d
+			text-decoration: underline
+			@media (max-width: $break_sm + px)
+				display: block
+		@media (max-width: $break_lg + px)
+			text-align: center
+	// .footer__logo
+	&__logo
+		text-align: right
+
+.footer-body
+	+flexbox()
+	justify-content: space-between
+	align-items: center
+	height: 125px
+	// .footer-body__column
+	&__column
+		flex: 0 0 50%
+		@media (max-width: $break_lg + px)
+			&:first-child
+				order: 2
+			&:last-child
+				order: 1
+				margin: 0px 0px 15px 0px
+
+	@media (max-width: $break_lg + px)
+		flex-direction: column
+		height: auto
+		padding: 15px 0
+
+

@@ -1,0 +1,70 @@
+.discounts
+	padding-bottom: 60px
+	&__title
+		max-width: 900px
+		margin: 0 auto
+		font-size: 32px
+		line-height: 50px
+	&__blocks
+		display: flex
+		justify-content: space-between
+.discount
+	&__block
+		position: relative
+		padding-top: 27px
+		padding-left: 26px
+		padding-right: 50px
+		background-color: $secondary
+		// max-width: 370px
+		min-height: 410px
+	&__text
+		max-width: 288px
+		font-size: 16px
+		+reg
+		&_strong
+			+bold
+	&__image
+		position: absolute
+		width: 100%
+		bottom: 0
+		left: 0
+		
+.header-title
+	padding: 100px 0
+	background: $main-color
+	margin-bottom: 100px
+
+@media (max-width: 1200px)
+	.discounts
+		&__title
+			max-width: 600px
+			font-size: 30px
+		&__blocks
+			flex-wrap: wrap
+			justify-content: center
+	.discount
+		&__block
+			flex-basis: 47%
+			margin: 0 10px 31px
+
+@media (max-width: 768px)
+	.discounts
+		padding-bottom: 30px
+		&__title
+			max-width: 600px
+			font-size: 18px
+			line-height: 1.4
+	.discount
+		&__block
+			padding-top: 17px
+			padding-left: 17px
+			padding-right: 40px
+			max-width: 272px
+			min-height: 280px
+			flex-basis: 90%
+			margin: 0 10px 31px
+		&__text
+			font-size: 12px
+	.header-title
+		padding: 72px 0
+		margin-bottom: 60px

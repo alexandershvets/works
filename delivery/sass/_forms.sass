@@ -1,0 +1,118 @@
+// <BUTTONS (btn + tab)> ================================================
+.btn
+	position: relative
+	display: inline-block
+	padding: 0 16px 0 33px
+	height: 40px // использовать вместе с line-height, т.к. шрифты в некоторых браузерах плохо рендер. и текст не становится по середине, поэтому ставим heights чтобы кнопка была как по макету
+	line-height: 40px
+	overflow: hidden
+	
+	border: 1px solid transparent
+	border-radius: 2px
+	background-color: $accent
+	color: #ffffff
+	font-size: 14px
+	text-decoration: none
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: 1px
+	min-width: 100px
+	cursor: pointer
+	transition: all .25s ease
+	svg
+		position: absolute
+		left: 10px
+		top: 50%
+		transform: translateY(-50%)
+		path
+			transition: all .3s ease
+	&:hover
+		background-color: lighten($accent, 5%)
+	&:active
+		background-color: darken($accent, 5%)
+	&.fw
+		width: 100%
+	&--car
+		background-color: transparent
+		color: $textcolor
+		border: 1px solid #D9D9D9
+		&:hover
+			color: #fff
+			svg
+				path
+					fill: #fff
+	&--w
+		svg path
+			fill: #fff
+	@media (max-width: $md4 + px)
+		padding: 0 10px 0 23px
+		font-size: 13px
+		svg
+			left: 5px
+		// width: 50%
+// </BUTTONS> ===============================================
+
+// <INPUT (inp+tab)> ==================================================
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+.input
+	position: relative
+	height: 40px
+	border-radius: 2px
+	width: 100%
+	display: block
+	padding: 0px 20px 0 32px
+	margin: 0px 0px
+	font-size: 16px
+	border: 1px solid #D9D9D9
+	background-color: #fff
+	color: #BFBFBF
+	&.focus
+		border-top: 1px solid blue
+		color: $textcolor
+	&.err
+		border-top: 1px solid red
+
+textarea.input
+	resize: none // убирает уголок изменения размера окна ввода текста
+	height: 117px
+	padding: 10px 20px
+
+.input-address
+	.input
+		width: 690px
+		background: #FFFFFF url('../images/dest/home.svg') 10px center no-repeat
+		@media (max-width: $md1 + px)
+			width: 500px
+		@media (max-width: $md2 + px)
+			width: 350px
+		@media (max-width: $md3 + px)
+			max-width: 230px
+		@media (max-width: 600px)
+			max-width: none
+			width: 100%
+
+.input-search
+	.input
+		min-width: 310px
+		background: #FFFFFF url('../images/dest/search.svg') 10px center no-repeat
+
+.input-quantity
+	position: relative
+	height: 100%
+	width: 100%
+	display: block
+	padding: 0 10px
+	margin: 0
+	font-size: 16px
+	background-color: #fff
+	color: #000
+	text-align: center
+		
+// </INPUT> =================================================

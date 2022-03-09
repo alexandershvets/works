@@ -1,0 +1,354 @@
+ .modal
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.5)
+	display: none //скрыли модальное окно
+	// &_active //модификатор. Показали модальное окно при помощи JS.
+	// 	display: flex
+	&-dialog
+		position: relative
+		margin: auto
+		max-width: 450px
+		width: 90%
+		min-height: 200px
+		background-color: #ffffff
+		padding: 40px
+		top: 50%
+		transform: translateY(-50%)
+		&__close
+			position: absolute
+			top: -10px
+			right: -10px
+			display: block
+			width: 30px
+			height: 30px
+			background: #2C2C2C
+			color: #fff
+			border: 0px
+			border-radius: 50%
+			&:hover
+				cursor: pointer
+			&:focus
+				outline: none
+		&__title
+			text-align: center
+
+// Модальное окно "Заказать звонок"
+.callback
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.5)
+	display: none
+	&-dialog
+		max-width: 450px
+		text-align: center
+		top: 50%
+		transform: translateY(-50%)
+		position: relative
+		margin: auto
+		min-height: 200px
+		background-color: #ffffff
+		padding: 40px
+	&__title
+		margin: 0 auto 52px
+		max-width: 290px
+		font-size: 22px
+		line-height: 33px
+		bold+
+	&__subtitle
+		display: block
+		margin-bottom: 53px
+		font-size: 16px
+		line-height: 35px
+	&__form
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__input
+		margin-bottom: 15px
+		width: 370px
+	&__button
+		margin-top: 30px
+		padding: 28px 0
+		width: 370px
+
+
+/* Модальные окна секции Price/Цены */
+
+/* Модальное окно "Ванная комната" */
+.modal-price
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.5)
+	display: none
+	&-dialog
+		position: relative
+		max-width: 1170px
+		max-height: 674px
+		background-color: #ffffff
+		display: flex
+		&_living
+		 min-height: 700px
+	&__dialog
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+.worcklist-block
+	&s
+		padding-top: 70px
+		padding-bottom: 65px
+		padding-left: 75px
+		padding-right: 30px
+		width: 600px
+		background: $secondary
+		display: flex
+		flex-direction: column
+		justify-content: center
+	&__room
+		display: flex
+		margin-bottom: 15px
+		&:hover
+			cursor: pointer
+			.worcklist-block__title
+				&:after
+					width: 100%
+	&__image
+		margin-right: 29px
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: center
+	&__title
+		position: relative
+		display: inline-block
+		margin: 0
+		margin-bottom: 27px
+		font-size: 16px
+		line-height: 22px
+		+bold
+		&:after
+			content: ''
+			display: block
+			bottom: -10px
+			left: 0
+			width: 40px
+			height: 2px
+			background-color: $main-color
+			position: absolute
+			transition: 0.5s
+	&__price
+		display: block
+		font-size: 16px
+		line-height: 22px
+		&_strong
+			+bold
+	&__descr
+		display: block
+		margin-top: 38px
+		margin-bottom: 28px
+		font-size: 14px
+		+bold
+	&__list
+		list-style: none
+		margin: 0
+		padding: 0
+	&__item
+		position: relative
+		margin-bottom: 10px
+		display: flex
+		align-items: center
+		font-size: 14px
+		&:before
+			content: ''
+			display: block
+			margin-right: 14px
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			background: $main-color
+.callback-block
+	padding-top: 70px
+	padding-bottom: 65px
+	padding-right: 100px
+	padding-left: 100px
+	width: 570px
+	// height: 674px
+	background: #fff
+	display: flex
+	flex-direction: column
+	justify-content: center
+	&__title
+		margin: 0 auto 52px
+		max-width: 290px
+		font-size: 22px
+		line-height: 33px
+		bold+
+		text-align: center
+	&__subtitle
+		display: block
+		margin-bottom: 53px
+		font-size: 16px
+		line-height: 1.4
+		text-align: center
+	&__form
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__input
+		margin-bottom: 15px
+		width: 370px
+	&__button
+		margin-top: 30px
+		padding: 28px 0
+		width: 370px
+
+.worcklist
+	&-block
+		&s
+			position: relative
+			&__slider
+				padding-left: 80px
+				padding-right: 80px
+				min-height: 674px
+				// margin-bottom: 52px
+	&-slider-office
+		&__item
+			width: 440px
+		&__image
+			width: 100%
+	&__arrows
+.arrows-worcklist
+	position: absolute
+	top: 40%
+	max-width: 440px
+	width: 440px
+	&__left
+		position: absolute
+		left: 0
+		width: 30px
+		height: 30px
+		background: $secondary
+		display: block
+		display: flex
+		align-items: center
+		justify-content: center
+	&__right
+		position: absolute
+		right: 0
+		width: 30px
+		height: 30px
+		background: $secondary
+		display: block
+		display: flex
+		align-items: center
+		justify-content: center
+.slider__descr
+	margin-top: 52px
+	font-size: 20px
+
+	
+
+
+@media (max-width: 1200px)
+	.modal-price
+		&-dialog
+			max-width: 900px
+	.worcklist-block
+		&s
+			padding-top: 30px
+			padding-right: 30px
+			padding-bottom: 30px
+			padding-left: 50px
+			&__slider
+				padding-left: 30px
+				padding-right: 30px
+				max-width: 470px
+		&__descr
+			margin-top: 20px
+			margin-bottom: 15px
+	.arrows-worcklist
+		top: 38%
+		&__right
+			right: 30px
+	.callback-block
+		padding-top: 30px
+		padding-right: 30px
+		padding-bottom: 30px
+		padding-left: 30px
+@media (max-width: 950px)
+	.modal-price
+		&-dialog
+			max-width: 450px
+			&_living
+				min-height: 505px
+	.worcklist-block
+		&s
+			display: none
+
+@media (max-width: 576px)
+	.modal-price
+		&-dialog
+			max-width: 93%
+			&_living
+				min-height: 362px
+	.callback-block
+		width: 100%
+		padding: 20px
+		&__title
+			margin: 0 auto 12px
+			max-width: 290px
+			font-size: 18px
+			line-height: 1.4
+			bold+
+		&__subtitle
+			display: block
+			margin-bottom: 13px
+			font-size: 12px
+			line-height: 35px
+			margin-bottom: 13px
+		&__input
+			margin-bottom: 10px
+			width: 250px
+		&__button
+			margin-top: 20px
+			padding: 18px 0
+			width: 250px
+
+	.callback
+		&-dialog
+			// max-width: 450px
+			width: 93%
+			padding: 25px 6px
+			// max-width: 450px
+			// text-align: center
+			// top: 50%
+			// transform: translateY(-50%)
+		&__title
+			margin: 0 auto 12px
+			max-width: 290px
+			font-size: 18px
+			line-height: 1.4
+			bold+
+		&__subtitle
+			display: block
+			margin-bottom: 13px
+			font-size: 12px
+			line-height: 35px
+		&__input
+			margin-bottom: 10px
+			width: 250px
+			
+		&__button
+			margin-top: 20px
+			padding: 18px 0
+			width: 250px
+			

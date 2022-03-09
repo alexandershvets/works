@@ -1,0 +1,423 @@
+@import config
+
+/** CUSTOM USER STYLES & IMPORTS **/
+
+
+/** ================= MAINBLOCK ================= **/
+.mainblock
+	flex: 1 1 auto
+	position: relative
+	+flexbox()
+	justify-content: center
+	text-align: center
+	padding: 50px 0
+	@media screen and (max-width: $break_md + px), screen and (max-height: 600px)
+		padding: 20px 0
+	// .mainblock__content
+	&__content
+		position: relative
+		z-index: 1
+		flex: 1 1 auto
+		.container
+			height: 100%
+			+flexbox()
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+	// .mainblock__logo
+	&__logo
+
+	// .mainblock__text
+	&__text
+		color: #ffffff
+		position: relative
+		padding: 0px 0px 45px 0px
+		margin: 30px 0
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0px
+			left: 50%
+			transform: translateX(-50%)
+			// margin: 0px 0px 0px -52.5px
+			width: 105px
+			height: 2px
+			background-color: #fff
+	// .mainblock__title
+	&__title
+		font-size: 34px
+		line-height: 40px
+		font-weight: 900
+		letter-spacing: 5.43px
+		text-transform: uppercase
+		margin: 0px 0px 10px 0px
+		@media screen and (max-width: $break_md + px), screen and (max-height: 600px)
+			font-size: 25px
+			line-height: 30px
+
+	// .mainblock__subtitle
+	&__subtitle
+		font-size: 26px
+		font-weight: 400
+		letter-spacing: 4.15px
+	// .mainblock__footer
+	&__footer
+		display: inline-flex
+		flex-direction: column
+	// .mainblock__btn
+	&__btn
+		margin: 0px 0px 60px 0px
+		@media screen and (max-width: $break_md + px), screen and (max-height: 600px)
+			margin: 0px 0px 30px 0px
+	// .mainblock__arrow
+	&__arrow
+		position: relative
+		animation: arrow 2s infinite ease
+	// .mainblock__image
+	&__image
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+@keyframes arrow
+	0%
+		top: 0
+	50%
+		top: 10px
+	100%
+		top: 0
+
+
+/** ================= CONTENT ================= **/
+.content
+	background-color: $content_bg_color
+	position: relative
+	z-index: 50
+
+
+/** ================= MENU ================= **/
+.menu
+	padding: 22px 0
+	border-bottom: 1px solid #f2f2f2
+	background-color: $menu_bg_color
+	// .menu--mb
+	&--mb
+		
+	@media (max-width: $break_sm + px)
+		padding: 22px 0 12px
+	// .menu__items
+	&__items
+
+	// .menu__list
+	&__list
+		+flexbox()
+		justify-content: center
+		align-items: center
+		padding: 0
+		li
+			margin: 0 25px
+			@media (max-width: $break_md + px)
+				margin: 0 15px 10px 15px
+			@media (max-width: $break_sm + px)
+				flex: 0 1 33.333%
+		@media (max-width: $break_sm + px)
+			flex-wrap: wrap
+	// .menu__link
+	&__link
+		color: $menulink_color
+		font-size: 15px
+		text-transform: uppercase
+		transition: color .25s ease
+		&:hover
+			color: $active_menulink_color
+		// .menu__link--active
+		&--active
+			color: $active_menulink_color
+			font-weight: 700
+
+
+/** ================= ABOUT ================= **/
+.about
+	padding: 130px 0px 60px 0px
+	@media (max-width: $break_lg + px)
+		padding: 50px 0px 60px 0px
+	@media (max-width: $break_md + px)
+		padding: 30px 0px 30px 0px
+	// .about__header-block
+	&__header-block
+		margin: 0px 0px 65px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 3px 0px
+	// .about__body
+	&__body
+		max-width: 900px
+		margin: 0 auto
+		text-align: center
+	// .about__row
+	&__row
+		// display: inline-flex
+		display: flex
+		padding: 0 -15px
+		@media (max-width: $break_md + px)
+			display: block
+	// .about__column
+	&__column
+		padding: 0px 15px 30px 15px
+		flex: 0 1 33.333%
+	// .about__item
+	&__item
+		text-align: center
+		max-width: 260px
+		@media (max-width: $break_md + px)
+			max-width: none
+	// .about__icon
+	&__icon
+		width: 92px
+		height: 92px
+		border-radius: 50%
+		border: 1px solid #f3f3f3
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		margin: 0px 0px 40px 0px
+		&--l
+			img
+				position: relative
+				left: 5px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 15px 0px
+	// .about__title
+	&__title
+		font-size: 22px
+		text-transform: uppercase
+		letter-spacing: 3.52px
+		margin: 0px 0px 33px 0px
+		@media (max-width: $break_lg + px)
+			font-size: 18px
+			margin: 0px 0px 25px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 15px 0px
+	// .about__text
+	&__text
+		color: $textcolor_second
+		font-size: 14px
+		font-weight: 300
+		line-height: 26px
+
+
+/** ================= PORTFOLIO ================= **/
+.portfolio
+	background-color: $section_bg_color
+	padding: 105px 0px 60px 0px
+	@media (max-width: $break_lg + px)
+		padding: 50px 0px 40px 0px
+	// .portfolio__header-block
+	&__header-block
+		margin: 0px 0px 50px 0px
+		@media (max-width: $break_lg + px)
+			margin: 0px 0px 30px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 20px 0px
+	// .portfolio__filter
+	&__filter
+		margin: 0px 0px 135px 0px
+		@media (max-width: $break_lg + px)
+			margin: 0px 0px 50px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 20px 0px
+	// .portfolio__items
+	&__items
+		+flexbox()
+		flex-wrap: wrap
+		margin: 0 -15px
+	// .portfolio__column
+	&__column
+		padding: 0px 15px 30px 15px
+		flex: 0 1 50%
+		max-width: 50% // чтобы колнки не разваливались в IE11
+		@media (max-width: $break_md + px)
+			flex: 1 1 100%
+			max-width: 100% // чтобы колнки не разваливались в IE11
+			padding: 0px 15px 20px 15px
+	// .portfolio__item
+	&__item
+		img
+			max-width: 100%
+	// .portfolio__footer
+	&__footer
+		padding: 35px 0px 0px 0px
+		text-align: center
+		@media (max-width: $break_md + px)
+			padding: 15px 0px 0px 0px
+	// .portfolio__btn
+	&__btn
+
+
+.filter
+	// .filter__list
+	&__list
+		+flexbox()
+		justify-content: center
+		align-items: center
+		padding: 0
+	// .filter__item
+	&__item
+		color: $menulink_color
+		font-size: 15px
+		text-transform: uppercase
+		margin: 0 25px
+		cursor: pointer
+		&.active
+			color: $active_menulink_color
+			font-weight: 700
+		@media (max-width: $break_md + px)
+			margin: 0 15px
+
+
+/** ================= PARTNERS ================= **/
+.partners
+	background: url('../images/dest/partners/bg.jpg') center / cover no-repeat
+	padding: 100px 0px 70px 0px
+	@media (max-width: $break_md + px)
+		padding: 30px 0px 30px 0px
+	// .partners__title
+	&__title
+		color: #ffffff
+		font-size: 30px
+		text-align: center
+		letter-spacing: 1.8px
+		margin: 0px 0px 90px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 30px 0px
+	// .partners__items
+	&__items
+		+flexbox()
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+	// .partners__column
+	&__column
+		padding: 0 50px
+		margin: 0px 0px 30px 0px
+		@media (max-width: $break_md + px)
+			padding: 0 30px
+	// .partners__item
+	&__item
+
+
+/** ================= CONTACTS ================= **/
+.contacts
+	padding: 180px 0px 80px 0px
+	@media (max-width: $break_lg + px)
+		padding: 80px 0px 50px 0px
+	@media (max-width: $break_md + px)
+		padding: 30px 0px 30px 0px
+	// .contacts__header-block
+	&__header-block
+		margin: 0px 0px 120px 0px
+		@media (max-width: $break_lg + px)
+			margin: 0px 0px 50px 0px
+		@media (max-width: $break_md + px)
+			margin: 0px 0px 30px 0px
+	// .contacts__body
+	&__body
+		+flexbox()
+		margin: 0 -15px
+		@media (max-width: $break_md + px)
+			display: block
+	// .contacts__column
+	&__column
+		flex: 0 1 50%
+		padding: 0px 25px
+	// .contacts__form
+	&__form
+		text-align: right
+		@media (max-width: $break_md + px)
+			text-align: left
+			margin: 0px 0px 30px 0px
+	// .contacts__content
+	&__content
+		max-width: 260px
+		@media (max-width: $break_md + px)
+			max-width: none
+	// .contacts__text
+	&__text
+		color: #000
+		font-size: 14px
+		line-height: 26px
+		margin: 0px 0px 35px 0px
+	// .contacts__name
+	&__name
+		color: #000
+		font-size: 14px
+		font-weight: 700
+		margin: 0px 0px 25px 0px
+	// .contacts__social
+	&__social
+		margin: 0px 0px 15px 0px
+	// .contacts__email
+	&__email
+		font-size: 14px
+		a
+			font-weight: 700
+			color: #000
+			&:hover
+				text-decoration: underline
+
+.form-contacts
+	// .form-contacts__body
+	&__body
+		display: inline-block
+		width: 100%
+		max-width: 385px
+		@media (max-width: $break_md + px)
+			max-width: none
+			display: block
+	// .form-contacts__row
+	&__row
+		+flexbox()
+		margin: 0 -15px 70px -15px
+		@media (max-width: $break_md + px)
+			margin: 0 -15px 30px -15px
+		@media (max-width: $break_sm + px)
+			display: block
+	// .form-contacts__column
+	&__column
+		flex: 0 1 50%
+		padding: 0 15px
+		@media (max-width: $break_sm + px)
+			&:first-child
+				margin: 0px 0px 30px 0px
+	// .form-contacts__input
+	&__input
+
+	// .form-contacts__label
+	&__label
+		color: #000000
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 0.84px
+		margin: 0px 0px 10px 0px
+		text-align: left
+	&__btn
+		margin: 35px 0px 0px 0px
+		@media (max-width: $break_md + px)
+			display: block
+			width: 100%
+
+.social
+	+flexbox()
+	// .social__item
+	&__item
+		margin: 0px 15px 0px 0px
+
+
+@import 'block/footer'
+
+
+/** UI, FORMS AND READY-CLASSES STYLES **/
+
+@import ui

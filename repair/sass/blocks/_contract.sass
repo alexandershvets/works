@@ -1,0 +1,40 @@
+.contracts
+	padding-bottom: 200px
+	&__title
+		margin: 0 auto 99px
+		max-width: 650px
+		font-size: 30px
+.slider-contract
+	max-width: 1070px
+	margin: 0 auto
+	&__item
+		&:focus
+			outline: none
+	&__image
+		max-width: 270px
+		height: 360px
+		margin: auto
+		background: $secondary
+		padding: 20px
+		margin-bottom: 41px
+	&__text
+		max-width: 286px
+		display: block
+		margin: auto
+		text-align: center
+		font-size: 18px
+		line-height: 24px
+
+@media (max-width: 768px)
+	.contracts
+		padding-top: 20px
+		padding-bottom: 50px
+		&__title
+			font-size: 18px
+			line-height: 1.4
+	.slider-contract
+		&__image
+			margin-bottom: 33px
+		&__text
+			font-size: 14px
+			max-width: 213px

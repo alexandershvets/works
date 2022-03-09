@@ -1,0 +1,250 @@
+// ЗАТЕМНЕНИЕ СЕКЦИЙ
+.overlay-section
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-color: rgba(#000, .85)
+
+
+// ГЛАВНЫЙ ЗАГОЛОВОК
+.title-main
+	color: $title_color
+	font-size: 100px
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 20.01px
+	position: relative
+	@media (max-width: $md1 + px)
+		font-size: 70px
+	@media (max-width: $md2 + px)
+		font-size: 55px
+	@media (max-width: $md3 + px)
+		font-size: 40px
+		letter-spacing: 5px
+
+
+// ГЛАВНЫЙ ПОДЗАГОЛОВОК
+.subtitle-main
+	color: rgba($title_color, .5)
+	font-size: 15px
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 4.81px
+	position: relative
+	z-index: 4
+	transform: rotate(90deg) translate(-58px, -149px)
+	@media (max-width: $md1 + px)
+		transform: rotate(90deg) translate(-58px, -100px)
+	@media (max-width: $md3 + px)
+		transform: rotate(0) translate(0, 0)
+
+
+// ЗАГОЛОВОК СЕКЦИЙ
+.title
+	color: $title_dark_color
+	font-size: 48px
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 3.36px
+	position: relative
+	&--light
+		color: $title_color
+		&::before
+			background-color: $text_light_color
+
+	@media (max-width: $md2 + px)
+		font-size: 38px
+	@media (max-width: $md3 + px)
+		font-size: 30px
+
+
+// ПОДЗАГОЛОВОК СЕКЦИЙ
+.subtitle
+	color: $textcolor
+	font-size: 15px
+	font-weight: 400
+	line-height: 25px
+	letter-spacing: 0.38px
+	position: relative
+	&--light
+		color: $text_light_color
+
+
+// ВСПЛЫВАЮЩАЯ ПОДСКАЗКА
+.webui-popover
+	margin: 0 0 0 10px
+	background-color: $popover_color
+	font-size: 15px
+	line-height: 20px
+	color: $text_light_color
+	padding: 10px
+	max-width: 200px
+	height: auto
+	border: none
+	border-radius: 6px
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+	@media (max-width: $md3 + px)
+		margin: 0 0 0 80px
+.webui-popover.bottom
+	margin-top: 15px
+
+.webui-popover.bottom > .webui-arrow:after,
+.webui-popover.bottom-right > .webui-arrow:after,
+.webui-popover.bottom-left > .webui-arrow:after
+	content: " "
+	top: 1px
+	margin-left: -10px
+	border-bottom-color: $popover_color
+	border-top-width: 0
+	@media (max-width: $md3 + px)
+		margin-left: -80px
+
+// <BUTTONS> ================================================
+.btn
+	position: relative
+	display: inline-block
+	padding: 0px 30px
+	height: 58px // использовать вместе с line-height, т.к. шрифты в некоторых браузерах плохо рендер. и текст не становится по середине, поэтому ставим heights чтобы кнопка была как по макету
+	line-height: 58px
+	overflow: hidden
+
+	border: 2px solid $btn_color_light
+	background-color: transparent
+	color: $btn_color_light
+	font-size: 14px
+	font-weight: 700
+	letter-spacing: 2.8px
+	text-transform: uppercase
+	text-decoration: none
+	text-align: center
+	min-width: 250px
+	cursor: pointer
+	transition: all .25s ease
+	span, svg
+		position: relative
+		z-index: 4
+	span
+		margin: 0px 9px 0px 0px
+	svg path
+		stroke: $btn_color_light
+		transition: stroke .3s ease 0s
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 50%
+		width: 0
+		height: 100%
+		background-color: darken($accent, 9%)
+		transition: all .3s ease 0s
+	&:hover
+		&::before
+			left: 0
+			width: 100%
+	&:active
+		&::before
+			background-color: lighten($accent, 3%)
+			
+	// .btn--noborder
+	&--noborder
+		border: none
+		color: $btn_color_dark
+		z-index: 4
+		&::before
+			background-color: $btn_color_dark
+		svg path
+			stroke: $accent
+		&:hover
+			color: $btn_color_light
+			svg path
+				stroke: $btn_color_light
+			&::before
+				background-color: $btn_color_dark
+		&:active
+			&::before
+				background-color: lighten($btn_color_dark, 13%)
+		@media (max-width: $md3 + px)
+			background-color: $btn_color_dark
+			color: $btn_color_light
+			&::before
+				background-color: none
+
+	&--video
+		margin: 0px 0px 0px 181px
+		span
+			padding: 0px 0px 0px 39px
+			line-height: 25px
+			display: inline-block
+			background: url('../images/dest/icons/play-btn.png') left center / 25px no-repeat
+
+	@media (max-width: $md2 + px)
+		height: 50px
+		line-height: 50px
+	@media (max-width: $md3 + px)
+		&::before
+			display: none
+// </BUTTONS> ===============================================
+
+// <IBG> =================================================
+.ibg
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	img
+		display: none
+// <IBG> =================================================
+
+// <BURGER> ==============================================
+.menu-mobile
+	// .menu-mobile__icon
+	&__icon
+		display: block
+		width: 30px
+		height: 18px
+		cursor: pointer
+		z-index: 5
+		position: relative
+		span
+			position: absolute
+			top: 8px
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: $accent
+			transition: all .3s ease
+			&:first-child
+				top: 0
+			&:last-child
+				top: auto
+				bottom: 0
+		&.active
+			span
+				transform: scale(0)
+				&:first-child
+					transform: rotate(-45deg)
+					top: 8px
+				&:last-child
+					transform: rotate(45deg)
+					bottom: 8px
+// </BURGER> ===================================================
+
+// =========================================================
+// используется для popup
+.table
+	display: table
+	font-size: 0
+	width: 100%
+	//table-layout: fixed
+
+.trow
+	display: table-row
+.cell
+	display: table-cell
+	&.full
+		width: 100%
+// =========================================================

@@ -1,0 +1,38 @@
+.footer
+	// .footer__body
+	&__body
+		height: 125px
+		+flexbox()
+		justify-content: space-between
+		align-items: center
+		@media (max-width: 600px)
+			display: block
+			height: auto
+			padding: 20px 0
+			text-align: center
+	// .footer__column
+	&__column
+		&:last-child
+			text-align: right
+			@media (max-width: $break_md + px)
+				text-align: center
+	// .footer__copy
+	&__copy
+		color: $textcolor
+		font-size: 12px
+		font-weight: 700
+		letter-spacing: 1px
+		text-transform: uppercase
+	// .footer__link
+	&__link
+		color: $textcolor
+		font-size: 12px
+		font-weight: 700
+		letter-spacing: 1px
+		text-transform: uppercase
+		margin: 0px 0px 0px 35px
+		&:hover
+			text-decoration: underline
+		@media (max-width: 600px)
+			margin: 15px 10px 0px 10px
+			display: block

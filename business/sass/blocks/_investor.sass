@@ -1,0 +1,69 @@
+.investor
+	margin-bottom: 100px
+	@media (max-width: $break_lg + px)
+		margin-bottom: 60px
+	@media (max-width: $break_md + px)
+		margin-bottom: 50px
+	// .investor__title
+	&__title
+		margin-bottom: 50px
+		@media (max-width: $break_md + px)
+			margin-bottom: 20px
+	// .investor__text
+	&__text
+		max-width: 670px
+		color: $textcolor
+		font-size: 20px
+		font-weight: 300
+		line-height: 36px
+		margin-bottom: 40px
+		@media (max-width: $break_md + px)
+			font-size: 16px
+			line-height: 24px
+			margin-bottom: 20px
+	// .investor__stat
+	&__stat
+
+	// .investor__btn
+	&__btn
+
+.stat-investor
+	+flexbox()
+	justify-content: space-between
+	margin: 0px -5px 30px -5px
+	// .stat-investor__column
+	&__column
+		flex: 0 1 auto
+		padding: 0 5px
+		margin-bottom: 25px
+		@media (max-width: $break_md + px)
+			flex: 0 0 33.333%
+		@media (max-width: $break_sm + px)
+			flex: 0 0 50%
+	// .stat-investor__item
+	&__item
+	
+	@media (max-width: $break_md + px)
+		margin: 0px -5px 0px -5px
+		flex-wrap: wrap
+		justify-content: center
+
+.item-stat
+	text-align: center
+	// .item-stat__value
+	&__value
+		color: $accent
+		@extend .pts
+		font-size: 54px
+		text-transform: uppercase
+		margin-bottom: 7px
+		@media (max-width: $break_lg + px)
+			font-size: 40px
+	// .item-stat__text
+	&__text
+		color: #aec3d4
+		font-size: 16px
+		line-height: 32px
+		@media (max-width: $break_lg + px)
+			font-size: 14px
+

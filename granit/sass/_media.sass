@@ -1,0 +1,279 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.instock
+		&-product
+			flex-basis: 32%
+			padding: 5px 18px 26px
+			&__title
+			&__subtitle
+				font-size: 12px
+				margin-bottom: 19px
+			&__price
+				margin-bottom: 25px
+
+	.features
+		&-block
+			flex-basis: 32%
+
+	.services-block
+		flex-basis: 31%
+
+	.contacts
+		&-block
+			padding: 40px 40px 50px
+
+	// #map
+	// 	// height: 503px
+	// 	height: 553px
+
+// ≥992px
++media-breakpoint-down(md)
+	.instock
+		&-product
+			flex-basis: 25%
+			padding: 5px 18px 26px
+			&__title
+			&__subtitle
+				font-size: 12px
+				margin-bottom: 19px
+			&__price
+				margin-bottom: 25px
+
+	.features
+		&-wrapper
+			flex-wrap: wrap
+			justify-content: center
+		&-block
+			margin-bottom: $gutter
+			padding: 30px
+			flex-basis: 75%
+			&__image
+				margin-bottom: 30px
+			&__title
+				margin-bottom: 10px
+
+	.catalog
+		&-wrapper
+			justify-content: center
+	.catalog-block
+		flex-basis: 40%
+		margin: 0 $gutter/2 $gutter/2
+
+	.services
+		&-wrapper
+			flex-wrap: wrap
+			justify-content: center
+	.services-block
+		margin-bottom: $gutter
+		flex-basis: 51%
+
+	.contacts
+		&-block
+			padding: 40px 25px 50px
+			flex-basis: 50%
+		&__title
+			margin-bottom: 30px
+		&__phone-block
+			margin-bottom: 25px
+		&__address-block
+			margin-bottom: 25px
+
+	.delivery
+		&-block
+			&__link
+				display: block
+				margin-left: 0
+				margin-top: 10px
+
+
+// ≥768px
++media-breakpoint-down(sm)
+	.topline
+		padding: 30px 0 30px
+
+	.callback
+		&__phone
+			display: none
+
+	.navbar
+		display: none
+		&-wrapper
+			position: absolute
+			right: 0
+			width: 100%
+			height: 100vh
+		&__list
+			position: absolute
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			top: 0
+			right: 0
+			width: 100%
+			height: 70%
+			box-shadow: 0px 5px 10px -5px #000
+		&__link
+			padding: 0 40px
+		&_active
+			display: block
+		
+	.menu-button
+		display: block
+
+	.hero
+		padding: 100px 0
+
+	.instock
+		padding: $gutter*2 0
+		&-wrapper
+			flex-wrap: wrap
+			justify-content: center
+		&-product
+			margin-bottom: $gutter
+			flex-basis: 100%
+			max-width: 300px
+			padding: 15px 18px 30px
+
+	.services-block
+		margin-bottom: $gutter
+		flex-basis: 100%
+		max-width: 300px
+
+	.footer
+		.wrapper-topline
+			margin-bottom: 54px
+		.copyright
+			text-align: center
+
+	.contacts
+		&-wrapper
+		&-block
+			flex-basis: 100%
+			width: 100%
+			// position: absolute
+			// left: 0
+			// bottom: 0
+		&__title
+			margin-bottom: 30px
+		&__phone-block
+			margin-bottom: 25px
+		&__address-block
+			margin-bottom: 25px
+
+	.delivery
+		padding-top: 60px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.section
+		&-title
+			line-height: 30px
+
+	.topline
+		padding: 20px 0
+		
+	.logo
+		&__title
+			font-size: 18px
+		&__subtitle
+			max-width: 120px
+			line-height: 12px
+
+	.header
+		&__button
+			padding: 10px
+
+	.hero
+		&__title
+			margin-bottom: 20px
+			line-height: 48px
+		&__subtitle
+			margin-bottom: 47px
+		&__button
+			margin-bottom: 10px
+
+	.features
+		&-wrapper
+			flex-wrap: wrap
+			justify-content: center
+		&-block
+			margin-bottom: $gutter
+			padding: 30px
+			flex-basis: 100%
+			max-width: 300px
+			&__image
+				margin-bottom: 30px
+			&__title
+				margin-bottom: 10px
+
+	.catalog-block
+		padding: 20px
+		flex-basis: 100%
+		max-width: 250px
+		margin: 0
+		margin: 0 $gutter/2 $gutter/2
+
+	.footer
+		.topline
+		.wrapper-topline
+			margin-bottom: 60px
+			flex-direction: column
+		.logo
+			margin-bottom: 45px
+			&__text
+				display: block
+			&__title
+			&__subtitle
+		.callback
+			flex-direction: column
+			&__phone
+				display: block
+				text-align: center
+				margin-right: 0
+			&__tel
+				font-size: 16px
+			&__descr
+				font-size: 10px
+			.header__button
+				margin-bottom: 10px
+				order: -1
+		.copyright
+			text-align: center
+			font-size: 10px
+
+	.delivery
+		&-block
+			padding-right: $gutter/2
+			padding-left: $gutter/2
+			font-size: 14px
+			&__title
+				line-height: 23px
+			&__list
+				margin-left: 0
+
+
+@media (max-width: 420px)
+	.logo
+		&__text
+			display: none
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

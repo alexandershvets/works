@@ -1,0 +1,112 @@
+*
+	box-sizing: border-box
+body
+	+reg
+img
+	max-width: 100% //всегда задавать такую настройку картинкам
+.container
+	width: 1170px
+	margin: auto
+@media (max-width: 1200px)
+	.container
+		width: 760px
+@media (max-width: 768px)
+	.container
+		max-width: 580px
+		width: 89% //95% от ширины экрана
+
+.button
+	border-radius: 10px
+	background-color: $main-color
+	border: none
+	padding: 18px 30px
+	&:focus
+			outline: none
+	// &:hover
+	// 	background-color: lighten($main-color, 10%)
+	// 	cursor: pointer
+
+.section
+	padding: 90px 0
+	&-title
+		font-size: 24px
+		line-height: 45px
+		+bold
+		text-align: center
+		max-width: 600px
+	&-subtitle
+		display: block
+		font-size: 16px
+
+.input
+	border: 1px solid $border-input
+	padding: 20px 26px
+	font-size: 15px
+	border-radius: 10px
+	&:focus
+		outline: none
+		border: 1px solid orange
+
+/* Кнопка вверх */
+.button-top
+	width: 55px
+	height: 55px
+	border-radius: 50%
+	background-color: $main-color
+	display: none
+	position: fixed
+	right: 5vw
+	bottom: 20px
+	z-index: 99
+	// &:hover
+	// 	background-color: lighten($main-color, 10%)
+	// 	cursor: pointer
+	&_active
+		display: flex
+	&__img
+		width: 30px
+		height: 30px
+		margin: auto
+
+/* Стрелки для слайдеров */
+.arrows
+	&__left, &__right
+		&:hover
+			cursor: pointer
+
+/* Класс ошибки для полей формы 2 */
+// .invalid
+// 	border: 1px solid red
+// 	font-size: 14px
+// 	margin-top: -10px
+// 	margin-bottom: 25px
+// 	&:focus
+// 		border: 1px solid red
+// #username-error,
+// #email-error,
+// #phone-error
+// 	border: none
+
+/* Класс ошибки для полей формы 1 */
+.invalid-second
+	border: 1px solid red
+	&:focus
+		border: 1px solid red
+#username-error,
+#email-error,
+#phone-error
+	border: none
+
+@media (min-width: 1200px)
+	.button
+		&:hover
+			background-color: lighten($main-color, 10%)
+			cursor: pointer
+	.button-top
+		&:hover
+			background-color: lighten($main-color, 10%)
+			cursor: pointer
+
+@media (max-width: 768px)
+	.invalid
+		margin-top: 0px

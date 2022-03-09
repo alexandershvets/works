@@ -1,0 +1,84 @@
+html
+	box-sizing: border-box
+
+*,
+*::before,
+*::after
+	box-sizing: inherit
+	-moz-box-sizing: inherit
+	-webkit-box-sizing: inherit
+
+*
+	padding: 0px
+	margin: 0px
+	border: 0px
+
+*:focus,
+*:active
+	outline: none
+
+a:focus,
+a:active
+	outline: none
+
+aside,
+nav,
+footer,
+header,
+section,
+main
+	display: block
+
+html,
+body
+	position: relative
+	min-width: $minwidth
+	width: 100%
+	height: 100%
+	margin: 0
+	padding: 0
+
+input,
+button,
+textarea
+	font-family: $mainfamily
+
+input::-ms-clear // крестик в input IE
+	display: none
+
+button
+	cursor: pointer
+
+button::-moz-focus-inner // лишние отступы для кнопок в mozile
+	padding: 0
+	border: 0
+
+a, a:visited
+	text-decoration: none
+
+a:hover
+	text-decoration: none
+
+ul li
+	list-style: none
+
+img
+	vertical-align: top
+
+h1,h2,h3,h4,h5,h6
+	font-size: inherit
+	font-weight: inherit
+
+::selection
+	background-color: $accent
+	color: #fff
+
+// ::placeholder
+// 	color: #666
+
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green

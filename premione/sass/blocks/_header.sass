@@ -1,0 +1,146 @@
+.header
+	padding: 29px 0 33px
+	background-color: $light_color
+	@media (max-width: $break_lg + px)
+		padding: 5px 0 5px
+	// .header__logo
+	&__logo
+
+
+.header-top
+	+flexbox()
+	justify-content: space-between
+	@media (max-width: $break_lg + px)
+		padding: 22px 0px 0px 0px
+		justify-content: flex-end
+	@media (max-width: $break_sm + px)
+		padding: 15px 0px 0px 0px
+	// .header-top__lang
+	&__lang
+		
+	// .header-top__link
+	&__link
+		font-size: $fontsize
+		line-height: 25px
+		text-transform: uppercase
+		color: $textcolor
+		position: relative
+		z-index: 11
+		@extend .akzi
+		text-decoration: underline
+		@media (max-width: $break_sm + px)
+			font-size: 14px
+
+.lang
+	+flexbox()
+	// .lang__item
+	&__item
+		margin: 0px 10px 0px 0px
+		padding: 0 4px
+		color: $textcolor
+		@extend .bebas
+		font-size: 14px
+		line-height: 25px
+		text-transform: uppercase
+		letter-spacing: 1px
+		text-decoration: underline
+		cursor: pointer
+		&.active
+			color: #ffffff;
+			background-color: $accent
+			text-decoration: none
+			cursor: default
+	@media (max-width: $break_lg + px)
+		margin: 0px 0px 15px 0px
+
+.header-bottom
+	margin: -22px 0px 0px 0px
+	+flexbox()
+	align-items: center
+	@media (max-width: $break_lg + px)
+		margin: -48px 0px 0px 0px
+	@media (max-width: $break_sm + px)
+			margin: -40px 0px 0px 0px
+	// .header-bottom__column
+	&__column
+		flex: 0 0 33.333%
+		&:last-child
+			+flexbox()
+			justify-content: flex-end
+	// .header-bottom__menu
+	&__menu
+
+.header-menu
+	// .menu-header__list
+	&__list
+		margin: 0 -22.5px
+		+flexbox()
+		li
+			padding: 0 22.5px
+			position: relative
+			@media (max-width: $break_xl + px)
+				padding: 0 10px
+			@media (max-width: $break_lg + px)
+				margin: 0px 0px 15px 0px
+		@media (max-width: $break_xl + px)
+			margin: 0 -10px
+		@media (max-width: $break_lg + px)
+			display: block
+	// .menu-header__link
+	&__link
+		color: $textcolor
+		@extend .akzi
+		font-size: $fontsize
+		line-height: 25px
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: -2px
+			width: 0
+			height: 1px
+			background-color: $accent
+			transition: all .3s ease
+		&:hover
+			&::after
+				left: 0
+				width: 100%
+			@media (max-width: $break_lg + px)
+				&::after
+					width: 0
+
+.logo-header
+	display: block
+	text-align: center
+	position: relative
+	z-index: 11
+	// .logo-header__text
+	&__text
+		display: block
+		color: $textcolor
+		@extend .bebas
+		font-size: 10px
+		// line-height: 25px
+		text-transform: uppercase
+		letter-spacing: 8px
+		span
+			letter-spacing: 2.72px
+		@media (max-width: $break_lg + px)
+			font-size: 8px
+		@media (max-width: $break_sm + px)
+			letter-spacing: 5px
+	// .logo-header__image
+	&__image
+		display: inline-block
+		margin: 13px 0px 22px 0px
+		@media (max-width: $break_lg + px)
+			margin: 2px 0px 5px 0px
+			img
+				width: 150px
+		@media (max-width: $break_sm + px)
+			margin: 0px 0px 2px 0px
+			img
+				width: 100px

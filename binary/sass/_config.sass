@@ -1,0 +1,169 @@
+/** USER MIXINS SECTION **/
+
+=anim($time, $delay)
+	transition: all $time ease $delay
+
+=scale($num)
+	transform: scale($num)
+
+=anim_cubic($time, $delay)
+	transition: all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay
+
+=flexbox()
+	display: flex
+	font-size: 0
+
+
+/** IMPORT SECTION **/
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'normalize.css/normalize' // CSS library plug-in example ( npm i --save normalize.css )
+@import 'baguettebox.js/src/baguetteBox.scss' // JS library plug-in baguettebox.js ( npm install baguettebox.js --save )
+
+
+/** USER VARIABLES SECTION **/
+
+$accent: #496081 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #000 // Text Color
+$mainfamily: Lato, sans-serif // Main Font Family
+
+$textcolor_second: #868585
+$content_bg_color: #fff
+$menulink_color: #3c3c3c
+$active_menulink_color: #ada074
+$menu_bg_color: #fff
+$section_bg_color: #f3f3f3
+$footer_bg_color: #3c3c3c
+$footer_link_color: #a4a4a4
+
+
+// Bootstrap compatible gutter variable => $gutter
+
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+
+/** MAIN GRID SECTION **/
+
+$minwidth: 320px
+$maxwidth: 1100
+$break_xl: $maxwidth + 12 // Extra large
+$break_lg: 992.98 // Large (планшеты)
+$break_md: 767.98 // Medium (телефоны)
+$break_sm: 479.98 // Small
+
+.container
+	max-width: $maxwidth + px
+	margin: 0 auto
+	width: 100%
+
+	@media (max-width: $break_xl + px)
+		max-width: 970px
+
+	@media (max-width: $break_lg + px)
+		max-width: 750px
+
+	@media (max-width: $break_md + px)
+		max-width: none
+		padding: 0 10px
+
+.wrapper
+	width: 100%
+	min-height: 100%
+	overflow: hidden
+
+	+flexbox()
+	flex-direction: column
+
+
+/** FONTS LOAD SECTION **/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap')
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+
+// @include font('myriadPro', normal, 400, '../fonts/myriadPro-regular.woff2')
+
+
+/** GENERAL DOCUMENT STYLES **/
+
+html
+	box-sizing: border-box
+	position: relative
+	min-width: $minwidth
+	height: 100%
+	width: 100%
+
+*,
+*::before,
+*::after
+	box-sizing: inherit
+
+ul li
+	list-style: none
+
+a
+	text-decoration: none
+
+// img
+// 	vertical-align: top
+
+// ::placeholder
+// 	color: #666
+
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
+
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green
+
+body
+	font-size: $fontsize
+	min-width: $minwidth
+	position: relative
+	line-height: 1.65
+	font-family: $mainfamily
+	overflow-x: hidden
+	color: $textcolor
+
+	height: 100%
+	width: 100%
+	&.lock
+		overflow: hidden
+		@media (max-width: $break_md + px)
+			width: 100%
+			position: fixed
+			overflow: hidden
+
+input,
+button,
+textarea
+	font-family: $mainfamily
+	outline: none
+	border: none
+
+input::-ms-clear
+	display: none

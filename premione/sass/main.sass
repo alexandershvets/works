@@ -1,0 +1,359 @@
+@import config
+
+/** CUSTOM USER STYLES & IMPORTS **/
+
+@import 'blocks/header'
+
+/** =============== PRIVATE ================= **/
+.private
+	+flexbox()
+	background-color: $accent
+	// .private__column
+	&__column
+		flex: 1 1 50%
+		position: relative
+		@media (max-width: $break_lg + px)
+			flex: 1 1 100%
+			&:first-child
+				display: none
+	// .private__image
+	&__image
+		height: 100%
+	// .private__body
+	&__body
+
+.private-body
+	padding: 75px 20px 75px 60px
+	@media (max-width: $break_xl + px)
+		padding: 30px 20px 30px 30px
+	// .private-body__content
+	&__content
+		max-width: 320px
+	// .private-body__title
+	&__title
+		margin: 0px 0px 30px 0px
+		@media (max-width: $break_xl + px)
+			margin: 0px 0px 20px 0px
+	// .private-body__text
+	&__text
+		font-size: 15px
+		color: $light_color
+		margin: 0px 0px 50px 0px
+		@media (max-width: $break_xl + px)
+			margin: 0px 0px 30px 0px
+	// .private-body__buttons
+	&__buttons
+		+flexbox()
+		align-items: center
+	// .private-body__btn
+	&__btn
+
+	// .private-body__link
+	&__link
+		color: $light_color
+		@extend .bebas
+		font-size: 15px
+		line-height: 25px
+		text-decoration: underline
+		text-transform: uppercase
+		letter-spacing: 1.5px
+		margin: 0px 0px 0px 15px
+
+/** =============== PRODUCTS ================= **/
+.products
+	padding: 75px 0 40px
+	@media (max-width: $break_lg + px)
+		padding: 40px 0 0
+	// .products__body
+	&__body
+		+flexbox()
+		@media (max-width: $break_lg + px)
+			flex-wrap: wrap
+			margin: 0 -5px
+	// .products__column
+	&__column
+		flex: 0 0 25%
+		margin: 0px 0px 40px 0px
+		@media (max-width: $break_lg + px)
+			flex: 0 0 50%
+			padding: 0 5px
+		@media (max-width: 400px)
+			flex: 1 1 100%
+	// .products__item
+	&__item
+
+
+.products-item
+	+flexbox()
+	flex-direction: column
+	height: 100%
+	align-items: flex-start
+	// .products-item__image
+	&__image
+		display: block
+		width: 100%
+		padding: 0px 0px 100% 0px
+		margin: 0px 0px 25px 0px
+		@media (max-width: 400px)
+			margin: 0px 0px 15px 0px
+	// .products-item__title
+	&__title
+		display: block
+		max-width: 185px
+		height: 50px
+		overflow: hidden
+		padding: 0px 10px 0px 0px
+		color: $textcolor
+		@extend .akzi
+		font-size: 25px
+		line-height: 25px
+		text-transform: uppercase
+		letter-spacing: 2.5px
+		margin: 0px 0px 30px 0px
+		@media (max-width: 400px)
+			max-width: none
+			height: auto
+			overflow: visible
+			margin: 0px 0px 20px 0px
+	// .products-item__text
+	&__text
+		flex: 1 1 auto
+		max-width: 204px
+		padding: 0px 10px 0px 0px
+		color: $textcolor
+		font-size: 15px
+		line-height: 25px
+		margin: 0px 0px 25px 0px
+		@media (max-width: 400px)
+			max-width: none
+			margin: 0px 0px 15px 0px
+	// .products-item__btn
+	&__btn
+		margin: 0px 0px 29px 0px
+	// .products-item__link
+	&__link
+
+/** ================= WHY ================= **/
+.why
+	// .why__top
+	&__top
+		
+	// .why__body
+	&__body
+
+.why-top
+	+flexbox()
+	background-color: $accent
+	// .why-top__column
+	&__column
+		flex: 0 0 50%
+		@media (max-width: $break_xl + px)
+			flex: 1 1 100%
+			&:last-child
+				display: none
+	// .why-top__text
+	&__text
+		margin: 55px 60px 55px 0px
+		padding: 0 10px
+		text-align: right
+		@media (max-width: $break_xl + px)
+			margin: 30px 0px
+			text-align: center
+		@media (max-width: $break_sm + px)
+			font-size: 35px
+	// .why-top__image
+	&__image
+		height: 100%
+
+
+.why-body
+	padding: 50px 0px 0px 0px
+	background-color: $section_bg_color
+	@media (max-width: $break_sm + px)
+		padding: 30px 0px 0px 0px
+	// .why-body__row
+	&__row
+		+flexbox()
+		flex-wrap: wrap
+		margin: 0 -5px
+	// .why-body__column
+	&__column
+		// flex: 0 0 50% // закоментил из-за IE
+		width: 50%
+		padding: 0px 5px 50px 5px
+		@media (max-width: $break_xl + px)
+			flex: 1 1 100%
+		@media (max-width: $break_sm + px)
+			padding: 0px 5px 30px 5px
+	// .why-body__item
+	&__item
+
+
+.why-item
+	+flexbox()
+	// .why-item__icon
+	&__icon
+		background-color: $accent
+		flex: 0 0 100px
+		height: 100px
+		+flexbox()
+		align-items: center
+		justify-content: center
+		@media (max-width: $break_sm + px)
+			flex: 0 0 80px
+			height: 80px
+			padding: 0 15px
+			img
+				max-width: 100%
+	// .why-item__body
+	&__body
+		flex: 1 1 100%
+		padding: 0px 10px 0px 11px
+		+flexbox()
+		flex-direction: column
+	// .why-item__title
+	&__title
+		@extend .akzi
+		font-size: 25px
+		line-height: 25px
+		text-transform: uppercase
+		letter-spacing: 2.5px
+		flex: 1 1 auto
+		margin: 0px 0px 15px 0px
+		@media (max-width: $break_sm + px)
+			font-size: 20px
+	// .why-item__text
+	&__text
+		font-size: 15px
+		line-height: 25px
+
+
+
+/** ================= CONTACTS ================= **/
+.contacts
+	padding: 80px 0px 0px 0px
+	// .contacts__top
+	&__top
+
+	// .contacts__title
+	&__title
+		margin: 0px 0px 30px 0px
+	// .contacts__body
+	&__body
+
+	// .contacts__content
+	&__content
+
+	@media (max-width: $break_lg + px)
+		padding: 30px 0px 0px 0px
+
+
+.contacts-body
+	+flexbox()
+	flex-wrap: wrap
+	// .contacts-body__column
+	&__column
+		flex: 0 0 50%
+		margin: 0px 0px 20px 0px
+		@media (max-width: $break_lg + px)
+			flex: 1 1 100%
+	// .contacts-body__item
+	&__item
+		color: $textcolor
+		font-size: 15px
+		line-height: 27px
+		display: inline-block
+		padding: 0px 0px 0px 35px
+		// contacts-body__item--1
+		&--1
+			background: url('../img/dest/contacts/01.svg') left no-repeat
+		// .contacts-body__item--2
+		&--2
+			background: url('../img/dest/contacts/02.svg') left no-repeat
+		// .contacts-body__item--3
+		&--3
+			background: url('../img/dest/contacts/03.svg') left no-repeat
+
+	// .contacts-body__social
+	&__social
+
+
+.contacts-social
+	+flexbox()
+	// .contacts-social__item
+	&__item
+		display: block
+		width: 24px
+		height: 24px
+		margin: 0px 20px 0px 0px
+		&:last-child
+			margin: 0px 0px 0px 0px
+		// .contacts-social__item--1
+		&--1
+			background: url('../img/dest/icons/social/01.png') center no-repeat
+		// .contacts-social__item--2
+		&--2
+			background: url('../img/dest/icons/social/02.png') center no-repeat
+		// .contacts-social__item--3
+		&--3
+			background: url('../img/dest/icons/social/03.png') center no-repeat
+		// .contacts-social__item--4
+		&--4
+			background: url('../img/dest/icons/social/04.png') center no-repeat
+
+
+.contacts-content
+	+flexbox()
+	background-color: #000
+	@media (max-width: $break_lg + px)
+		display: block
+	// .contacts-content__column
+	&__column
+		flex: 0 0 50%
+	// .contacts-content__map
+	&__map
+		height: 100%
+		@media (max-width: $break_lg + px)
+
+			height: 300px
+	// .contacts-content__form
+	&__form
+
+
+.contacts-form
+	padding: 55px 60px
+	// .contacts-form__title
+	&__title
+		color: #ffffff
+		@extend .akzi
+		font-size: 25px
+		text-transform: uppercase
+		letter-spacing: 2.5px
+		margin: 0px 0px 30px 0px
+	// .contacts-form__body
+	&__body
+
+	@media (max-width: $break_lg + px)
+		padding: 30px
+
+.form-contacts
+	max-width: 375px
+	// .form-contacts__line
+	&__line
+		margin: 0px 0px 25px 0px
+	// .form-contacts__button
+	&__button
+
+	// .form-contacts__btn
+	&__btn
+
+	@media (max-width: $break_lg + px)
+		max-width: none
+
+
+@import 'blocks/footer'
+
+
+/** UI, FORMS AND READY-CLASSES STYLES **/
+
+@import ui

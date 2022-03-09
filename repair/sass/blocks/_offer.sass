@@ -1,0 +1,98 @@
+.offer
+	background: url(../img/offer/offer-bg.jpg) no-repeat
+	background-position: center right
+	background-size: contain
+	position: relative
+	&:before
+		content: ''
+		width: 50%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		background-color: #ffffff
+	&-block
+		width: 50%
+		padding-right: 90px
+		position: relative //добавил чтобы блок вышел вперед над before
+	&__title
+		max-width: 360px
+		line-height: 35px
+		margin-bottom: 24px
+		text-align: left
+	&__subtitle
+		max-width: 250px
+		margin-bottom: 30px
+	&__input
+		margin-bottom: 30px
+		width: 240px
+		&:first-child
+			margin-right: 10px
+	&__button
+		width: 100%
+		min-height: 70px
+		margin-bottom: 30px
+		+bold
+	&__info
+		display: flex
+		justify-content: space-between
+		text-align: left
+	&__manager
+		flex-basis: 45%
+		font-size: 15px
+		line-height: 1.4
+	&__contacts
+		flex-basis: 45%
+	&__callback
+		font-size: 15px
+		line-height: 1.4
+		display: block
+	&__phone
+		text-decoration: none
+		font-size: 15px
+		line-height: 1.4
+		+bold
+		color: $text-color
+
+@media (max-width: 1200px)
+	.offer
+		background-size: cover
+		&-block
+			padding-right: 30px
+		&__subtitle
+			max-width: 100%
+		&__wrapper-input
+			width: 100%
+		&__input
+			width: 100%
+			margin-bottom: 10px
+		&__button
+			font-size: 13px
+@media (max-width: 768px)
+	.offer
+		background: #ffffff
+		padding: 53px 0 56px 0
+		&-block
+			width: 100%
+			text-align: center
+			padding-right: 0
+		&__title
+			max-width: 100%
+			font-size: 18px
+			line-height: 1.4
+			text-align: left
+			margin-bottom: 20px
+		&__subtitle
+			max-width: 100%
+			text-align: left
+			margin-bottom: 27px
+		&__input
+			margin-bottom: 8px
+		&__button
+			margin-bottom: 27px
+			padding-left: 64px
+			padding-right: 64px
+		&__info
+			flex-direction: column
+		&__manager
+			margin-bottom: 18px

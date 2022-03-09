@@ -1,0 +1,144 @@
+header
+	position: relative
+	z-index: 50
+	@media (max-width: $break_md + px)
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		background-color: #fff
+.header
+	// .header__body
+	&__body
+		height: 100px
+		+flexbox()
+		justify-content: space-between
+		align-items: center
+		@media (max-width: $break_lg + px)
+			height: 70px
+		@media (max-width: $break_md + px)
+			height: 50px
+	// .header__column
+	&__column
+
+	// .header__logo
+	&__logo
+		display: inline-block
+		width: 172px
+		position: relative
+		z-index: 6
+		img
+			max-width: 100%
+		@media (max-width: $break_lg + px)
+			width: 130px
+
+.menu-header
+	// .menu-header__icon
+	&__icon
+		display: none
+		position: relative
+		width: 30px
+		height: 18px
+		cursor: pointer
+		z-index: 5
+		span
+			transition: all .3s ease
+			position: absolute
+			top: 8px
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: #000
+			&:first-child
+				top: 0
+			&:last-child
+				top: auto
+				bottom: 0
+		&.active
+			span
+				transform: scale(0)
+				&:first-child
+					transform: rotate(-45deg)
+					top: 8px
+				&:last-child
+					transform: rotate(45deg)
+					bottom: 8px
+		@media (max-width: $break_md + px)
+			display: block
+	// .menu-header__menu
+	&__menu
+		@media (max-width: $break_md + px)
+			position: fixed
+			top: 0
+			left: -110%
+			width: 100%
+			height: 100%
+			background-color: #fff
+			z-index: 2
+			padding: 50px 10px 20px 10px
+			overflow: auto
+			transition: all .3s ease
+		&.active
+			left: 0
+	// .menu-header__list
+	&__list
+		+flexbox()
+		padding: 0
+		li
+			margin: 0px 0px 0px 35px
+			@media (max-width: $break_xl + px)
+				margin: 0px 0px 0px 25px
+			@media (max-width: $break_lg + px)
+				margin: 0px 0px 0px 15px
+			@media (max-width: $break_md + px)
+				margin: 0px 0px 10px 0px
+				&:last-child
+					margin: 0px 0px 0px 0px
+		@media (max-width: $break_md + px)
+			display: block
+	// .menu-header__link
+	&__link
+		color: $menulink_color
+		font-size: 12px
+		line-height: 14px
+		font-weight: 700
+		letter-spacing: 1px
+		text-transform: uppercase
+		cursor: pointer
+		
+		display: block
+		transition: all .3s ease
+		// .menu-header__link--circle
+		&--circle
+			padding: 0px 42px 0px 0px
+			background: url('../images/dest/icons/earth.svg') right no-repeat
+			@media (max-width: $break_lg + px)
+				background-size: 20px
+				padding: 0px 25px 0px 0px
+			@media (max-width: $break_md + px)
+				padding: 0px 0px 0px 25px
+				background-position: left
+		span
+			position: relative
+			line-height: 28px
+			display: block
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				bottom: 0
+				width: 0
+				height: 1px
+				background-color: $accent
+				transition: all .3s ease
+		&:hover
+			color: $accent
+			span
+				&::after
+					left: 0
+					width: 100%
+		@media (max-width: $break_lg + px)
+			font-size: 11px
+		@media (max-width: $break_md + px)
+			font-size: 14px
+

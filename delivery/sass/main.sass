@@ -1,0 +1,334 @@
+@import config
+
+
+// CUSTOM USER STYLES
+
+.main
+	background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+	flex: 1 1 auto
+
+// =============== <PROMO> =================
+.promo
+	padding: 0px 0px 56px 0px
+	@media (max-width: $md2 + px)
+		padding: 0px 0px 40px 0px
+	@media (max-width: $md3 + px)
+		padding: 15px 0px 40px 0px
+	// .promo__body
+	&__body
+		padding: 68px 70px
+		box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1)
+		background-color: #FFF1B8
+		border-radius: 10px
+		position: relative
+		@media (max-width: $md2 + px)
+			padding: 68px 30px
+		@media (max-width: $md3 + px)
+			padding: 50px 15px
+		@media (max-width: $md4 + px)
+			padding: 40px 15px
+	&__image
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		&.ibg
+			background-position: right -28% center
+			background-size: 66%
+			@media (max-width: $md1 + px)
+				background-position: right -54% center
+			@media (max-width: $md3 + px)
+				background-position: right -500% center
+				background-size: 91%
+			@media (max-width: $md4 + px)
+				display: none
+	// .promo__title
+	&__title
+		font-size: 39px
+		font-weight: 700
+		line-height: 46px
+		color: #302C34
+		margin-bottom: 15px
+		@media (max-width: $md2 + px)
+			font-size: 37px
+		@media (max-width: $md3 + px)
+			font-size: 30px
+			line-height: 1.2
+		@media (max-width: $md4 + px)
+			font-size: 25px
+	// .promo__text
+	&__text
+		max-width: 529px
+		position: relative
+		z-index: 4
+		@media (max-width: $md2 + px)
+			max-width: 450px
+		@media (max-width: $md3 + px)
+			max-width: 300px
+	// .promo__descr
+	&__descr
+		font-size: 24px
+		line-height: 28px
+		@media (max-width: $md2 + px)
+			font-size: 22px
+		@media (max-width: $md3 + px)
+			font-size: 20px
+			line-height: 1.2
+		@media (max-width: $md4 + px)
+			font-size: 18px
+
+// =============== </PROMO> =================
+
+// =============== <RESTAURANTS> =================
+.section
+	&__items
+		+flexbox()
+		justify-content: flex-start
+		flex-wrap: wrap
+		margin: 0 -12px
+	&__column
+		flex: 0 1 33.333%
+		padding: 0px 12px 30px 12px
+		@media (max-width: $md2 + px)
+			flex: 0 1 50%
+		@media (max-width: 624px)
+			flex: 0 1 100%
+
+.restaurants
+	padding: 0 0 60px
+	@media (max-width: $md2 + px)
+		padding: 0 0 20px
+	@media (max-width: $md3 + px)
+		padding: 0 0 10px
+	// .restaurants__header-block
+	&__header-block
+		margin: 0px 0px 44px 0px
+		+flexbox()
+		justify-content: space-between
+		align-items: center
+		@media (max-width: $md3 + px)
+			flex-direction: column
+			justify-content: center
+			margin: 0px 0px 25px 0px
+		.header-block__title
+			margin-right: 30px
+			@media (max-width: $md3 + px)
+				margin-bottom: 10px
+	// .restaurants__items
+	&__items
+		+flexbox()
+		justify-content: flex-start
+		flex-wrap: wrap
+		margin: 0 -12px
+	.restaurants__column
+	&__column
+		flex: 0 1 33.333%
+		padding: 0px 12px 30px 12px
+		@media (max-width: $md2 + px)
+			flex: 0 1 50%
+		@media (max-width: 624px)
+			flex: 0 1 100%
+
+.restaurants-card
+	background-color: #fff
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+	border-radius: 7px
+	overflow: hidden
+	max-width: 384px
+	margin: 0 auto
+	display: flex
+	flex-direction: column
+	height: 100%
+	transform: translateY(0)
+	transition: all .5s ease
+	&:hover
+		transform: translateY(-3%)
+	// .restaurants-card__image
+	&__image
+		width: inherit
+		height: 250px
+		overflow: hidden
+		display: block
+		img
+			max-width: 100%
+		@media (max-width: $md1 + px)
+			height: 200px
+		@media (max-width: $md2 + px)
+			height: 237px
+		@media (max-width: $md3 + px)
+			height: auto
+	// .restaurants-card__content
+	&__content
+		padding: 20px 23px 35px 23px
+		@media (max-width: $md1 + px)
+			padding: 15px 10px 20px 10px
+		@media (max-width: $md3 + px)
+			padding: 10px 10px 10px 10px
+	// .restaurants-card__header-block
+	&__header-block
+		+flexbox()
+		justify-content: space-between
+		align-items: flex-start
+		margin-bottom: 10px
+	// .restaurants-card__title
+	&__title
+		font-size: 24px
+		line-height: 32px
+		font-weight: 700
+		color: #000
+		max-width: 225px
+		@media (max-width: $md3 + px)
+			max-width: 215px
+	// .restaurants-card__tag
+	&__tag
+		margin-top: 5px
+	// .restaurants-card__info
+	&__info
+
+.btn-block-card
+	+flexbox()
+	align-items: center
+	justify-content: flex-start
+	// .btn-block-card__btn
+	&__btn
+		margin-right: 32px
+	// .btn-block-card__price
+	&__price
+		font-size: 20px
+		line-height: 32px
+		font-weight: 700
+		color: #000
+
+.info-restaurants
+	+flexbox()
+	align-items: center
+	text-overflow: ellipsis
+	overflow: hidden
+	white-space: nowrap
+	max-width: 285px
+	// .info-restaurants__rating
+	&__rating
+		margin-right: 26px
+	// .info-restaurants__price
+	&__price
+		margin-right: 10px
+	// .info-restaurants__category
+	&__category
+
+
+.tag
+	height: 22px
+	line-height: 22px
+	padding: 0 8px
+	background-color: #000
+	color: #fff
+	font-size: 12px
+	display: inline-block
+	border-radius: 2px
+
+.rating
+	font-size: 18px
+	line-height: 32px
+	color: #FFC107
+	padding-left: 19px
+	background: url('../images/dest/star.svg') left top 8px no-repeat
+
+.price, .category
+	color: #8C8C8C
+	font-size: 17px
+	line-height: 32px
+
+.price
+	padding-right: 15px
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		right: 0
+		top: 45%
+		width: 5px
+		height: 5px
+		background-color: #8C8C8C
+		border-radius: 50%
+		display: block
+
+// =============== </RESTAURANTS> =================
+
+// =============== <RESTAURANT> =================
+.restaurant
+	padding: 0px 0px 70px 0px
+	@media (max-width: $md2 + px)
+		padding: 0px 0px 60px 0px
+	@media (max-width: $md3 + px)
+		padding: 20px 0px 30px 0px
+	// .restaurant__header-block
+	&__header-block
+
+	.header-block
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin-bottom: 44px
+		// @media (max-width: $md3 + px)
+			// margin-bottom: 24px
+		// .header-block__title
+		&__title
+			margin-right: 30px
+			@media (max-width: $md3 + px)
+				margin-bottom: 5px
+
+
+.restaurant-card
+	+flexbox()
+	flex-direction: column
+	height: 100%
+	// .restaurant-card__title
+	&__title
+		font-size: 24px
+		line-height: 32px
+		color: #000
+		margin-bottom: 10px
+		padding: 20px 23px 0px 23px
+		@media (max-width: $md3 + px)
+			padding: 15px 15px 0px 15px
+	// .restaurant-card__ingredients
+	&__ingredients
+		font-size: 18px
+		line-height: 21px
+		color: #8C8C8C
+		margin-bottom: 24px
+		padding: 0px 23px
+		@media (max-width: $md3 + px)
+			padding: 0px 15px
+	// .restaurant-card__btn-block
+	&__btn-block
+		+flexbox()
+		align-items: center
+		padding: 0px 23px 35px 23px
+		margin-top: auto
+		@media (max-width: $md3 + px)
+			padding: 0px 15px 20px 15px
+		.btn
+			margin-right: 32px
+			svg path
+				fill: #fff
+	// .restaurant-card__price
+	&__price
+		font-size: 20px
+		line-height: 32px
+		color: #000
+		font-weight: 700
+
+.info-restaurants
+	// .info-restaurants__rating
+	&__rating
+
+	// .info-restaurants__price
+	&__price
+
+	// .info-restaurants__category
+	&__category
+
+
+// =============== </RESTAURANT> =================
