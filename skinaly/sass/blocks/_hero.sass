@@ -1,0 +1,44 @@
+.hero
+	background-color: #f1f1f1
+	background-image: url('../img/hero/hero-bg.jpg')
+	background-repeat: no-repeat
+	background-position: right 60% top
+	background-size: cover
+	padding-top: 170px
+	padding-bottom: 270px
+	margin-top: 80px
+	&__title
+		margin-top: 0
+		margin-bottom: 40px
+		font-size: 30px
+		max-width: 262px
+	&__subtitle
+		display: block
+		margin-bottom: 67px
+		font-size: 30px
+		max-width: 210px
+		+bold
+		&_top
+			font-size: 18px
+	&__button
+		padding: 20px 44px
+		font-size: 15px
+
+@media (max-width: 992px)
+	.hero
+		background-size: cover
+		background-position: top left 33%
+@media (max-width: 576px)
+	.hero
+		padding-top: 100px
+		padding-bottom: 170px
+		margin-top: 60px
+		background-position: top left 56%
+		&__button
+			box-shadow: 1px 1px 10px 1px #000
+		&__title, &__subtitle
+			padding: 10px
+			border-radius: 5px
+			background: rgba(#f1f1f1, 0.9)
+		&__subtitle
+			background: rgba(#f1f1f1, 0.9)

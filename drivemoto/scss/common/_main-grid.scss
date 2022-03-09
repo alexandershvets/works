@@ -1,0 +1,15 @@
+// MAIN GRID
+
+$minWidth: 320px;
+$maxWidth: 1170 + 30;
+$md1: $maxWidth + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+._container {
+  max-width: $maxWidth + px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}

@@ -1,0 +1,116 @@
+body
+	+light
+	color: $text-color
+img
+	max-width: 100%
+
+// Фоновый цвет секций
+.bg-secondary
+	background-color: $bg-secondary
+// Заголовок секций
+.section
+	padding: 100px 0
+	&-title
+		font-size: 30px
+		+bold
+		text-transform: uppercase
+		text-align: center
+	&__title
+		margin-top: 0
+		margin-bottom: 100px
+
+// Кнопки
+.button
+	border: 2px solid $primary
+	text-transform: uppercase
+	background-color: $primary
+	color: #ffffff
+	text-decoration: none
+	+bold
+	cursor: pointer
+	transition: 0.3s
+	&:focus
+		outline: none
+// Прозрачная кнопка
+.button-o
+	background-color: #fff
+	color: $primary
+
+// Стили формы
+.input
+	padding: 0 30px
+	height: 80px
+	border: 1px solid #dddddd
+	&:focus
+		outline: none
+		border: 1px solid $primary
+// Стили четбокса (четбокс нужо скрывать)
+.visuallyhidden
+	display: none
+	&:checked +label:before
+		background-color: $primary
+.checkbox-label
+	display: flex
+	align-items: center
+	margin-right: 40px
+	&:hover
+		cursor: pointer
+	&:before
+		content: ''
+		display: inline-block
+		width: 30px
+		height: 30px
+		border: 1px solid #ddd
+		margin-right: 20px
+
+// настройка пагинации слайдеров
+.slider-dots
+	padding: 0
+	list-style: none
+	display: flex
+	justify-content: center
+	li
+		margin-right: 10px
+		width: 10px
+		height: 10px
+		background-color: #d1d1d1
+		border-radius: 50%
+		cursor: pointer
+		&:last-child
+			margin-right: 0
+	li.slick-active
+		background-color: $primary
+	button
+		display: none
+
+@media (min-width: 768px)
+	// hover эффекты для кнопок на экранах больше 768px
+	.button
+		&:hover
+			background-color: $primary-hover
+			border: 2px solid $primary-hover
+	.button-o
+		&:hover
+			background-color: $primary
+			border: 2px solid $primary
+			color: #ffffff
+@media (max-width: 768px)
+	.section
+		padding: 60px 0
+		&-title
+			margin-bottom: 60px
+			font-size: 24px
+@media (max-width: 576px)
+	.section
+		padding: 60px 0
+		&-title
+			margin-bottom: 60px
+			font-size: 22px
+	.input
+		height: 60px
+	.checkbox-label
+		margin-right: 10px
+		&:before
+			height: 20px
+			width: 20px
+			margin-right: 5px

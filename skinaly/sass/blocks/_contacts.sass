@@ -1,0 +1,44 @@
+.contacts
+	position: relative
+	&-block
+		display: flex
+		justify-content: space-around
+		// flex-wrap: wrap
+	&__item
+		text-align: center
+	&__img
+		margin: 0 auto 25px
+		width: 30px
+		height: 30px
+	&__text
+		font-size: 16px
+		color: $text-color
+		font-style: normal
+	&__phone,
+	&__email
+		text-decoration: none
+.map
+	position: absolute
+	width: 100%
+	height: 410px
+	bottom: 0
+	left: 0
+
+@media (max-width: 768px)
+	.contacts
+		&-block
+			flex-direction: column
+			align-items: flex-start
+			margin: 0 auto
+		&__item
+			margin-bottom: 20px
+			display: flex
+			align-items: center
+		&__img
+			margin: 0 15px 0 0
+		&__text
+			text-align: left
+@media (max-width: 576px)
+	.contacts
+		&__text
+			max-width: 200px

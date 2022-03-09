@@ -1,0 +1,75 @@
+.before
+	background-color: #fff		
+	&__dots
+		margin: 28px 0 0
+
+// настройка стилей оверлея в плагине ДО/ПОСЛЕ
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before
+	padding: 10px
+	font-size: 13px
+	line-height: 13px
+.twentytwenty-horizontal .twentytwenty-before-label:before,
+.twentytwenty-horizontal .twentytwenty-after-label:before
+	top: 20px
+	text-transform: uppercase
+.twentytwenty-horizontal .twentytwenty-before-label:before
+	left: 0
+.twentytwenty-horizontal .twentytwenty-after-label:before
+	right: 0
+
+// настройка пагинации по стилям из slick-theme.scss	
+// .slick
+// 	&-dots
+// 		li
+// 			width: 10px
+// 			height: 10px
+// 			button
+// 				margin: 0 auto
+// 				border-radius: 50%
+// 				width: 10px
+// 				height: 10px
+// 				background-color: #d1d1d1
+// 				&:before
+// 					display: none
+// 		li.slick-active
+// 			button
+// 				background-color: $primary
+			
+
+.slider-wrap
+	position: relative
+	max-width: 640px
+	margin: auto
+.slider-arrows
+.arrow
+	position: absolute
+	top: 50%
+	transform: translateY(-100%)
+	background-color: transparent
+	border: none
+	cursor: pointer
+	&:focus
+		outline: none
+	&-prev
+		left: -60px
+	&-next
+		right: -60px
+
+@media (max-width: 992px)
+	.slider-wrap
+		max-width: 600px
+@media (max-width: 768px)
+	.slider-wrap
+		// width: 100%
+	.slider-arrows
+		display: none
+@media (max-width: 576px)
+	.before
+		&-slider
+			&__dots
+				margin-top: 20px
+	.slider-wrap
+		width: 100%
+		height: auto
+	

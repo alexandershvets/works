@@ -1,0 +1,203 @@
+.offer
+	padding-top: 129px
+	padding-bottom: 129px
+	&__block
+		margin-top: -240px
+	&-block
+		padding: 60px 80px
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+		background-color: #fff
+		background-repeat: no-repeat
+		background-position: center right
+		background-size: contain
+		&_calc-bg
+			background-image: url('../img/offer/form-bg-calc.jpg')
+		&_price-bg
+			background-image: url('../img/offer/form-bg-price.jpg')
+			margin-top: -300px
+	&__title
+		margin-top: 0
+		margin-bottom: 20px
+		font-size: 25px
+		text-transform: uppercase
+		+bold
+	&__subtitle
+		display: block
+		margin-bottom: 47px
+		font-size: 21px
+		max-width: 690px
+		&_price
+			max-width: 840px
+// Стили формы
+.form
+	fieldset
+		margin: 0
+		padding: 0
+		border: none
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		display: flex
+		align-items: center
+		&_price
+			margin-bottom: 30px
+	&__group
+		display: flex
+		flex-direction: column
+		flex-basis: 33.33%
+		&_price
+			margin-right: 45px
+		&_width
+			flex-basis: 35%
+	&__label
+		font-size: 17px
+		margin-bottom: 15px
+	&__input
+		width: 100%
+		border-right-width: 0px
+		&:last-child
+			border-right-width: 1px
+	&__checkbox
+		padding: 25px 0
+	&__button
+		height: 80px
+		font-size: 16px
+	&__police
+		font-size: 17px
+
+// Стили выпадающего списка формы
+.select
+	position: relative
+	width: 100%
+	text-align: left
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 20px
+		width: 20px
+		height: 10px
+		background: url('../img/offer/arrow-bottom.png') no-repeat center
+		pointer-events: none
+	&:hover
+		cursor: pointer
+	&_checked
+		line-height: 80px
+		padding: 0 30px
+		height: 80px
+		width: 100%
+		border: 1px solid #dddddd
+	&__dropdown
+		&-list
+			padding: 0
+			margin: 0
+			list-style: none
+			position: absolute
+			width: 100%
+			top: 80px
+			left: 0
+			border: 1px solid darken(#dddddd, 10%)
+			border-top: none
+			background-color: #fff
+			display: none
+			&_open
+				display: block
+		&-item
+			padding: 5px 30px
+			line-height: 40px
+			text-align: left
+			border-bottom: 1px solid #dddddd
+			&:last-child
+				border-bottom: none
+
+
+@media (max-width: 1200px)
+	.offer
+		&-block
+			background-position: center right -100px
+		&__subtitle
+			&_price
+				max-width: 700px
+@media (max-width: 992px)
+	.offer
+		&-block
+			padding: 40px
+			&_calc-bg
+				background-position: center right -130px
+		&__subtitle
+			max-width: 500px
+			&_price
+				max-width: 560px
+@media (min-width: 768px)
+	.select
+		&__dropdown
+			&-item
+				&:hover
+					background-color: $bg-secondary
+@media (max-width: 768px)
+	.offer
+		&-block
+			background-image: none
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: 16px
+			max-width: 100%
+	.form
+		&__list
+			flex-direction: column
+			&-checkbox
+				flex-direction: row
+				margin: auto
+				width: 100%
+			&_price
+				margin: 0
+		&__group
+			width: 100%
+			&_price
+				margin-right: 0
+				margin-bottom: 30px
+		&__input
+			margin-bottom: 20px
+		&__police
+			text-align: center
+	.select
+		margin-bottom: 20px
+@media (max-width: 576px)
+	.offer
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: 16px
+			margin-bottom: 30px
+		&-block
+			padding: 30px 15px
+			text-align: center
+	.form
+		&__list
+			width: 100%
+			margin: auto
+			&-checkbox
+				width: 100%
+				justify-content: center
+		&__label
+			margin-bottom: 5px
+			font-size: 15px
+		&__checkbox
+			padding: 5px 0 25px
+		&__input
+			width: 100%
+		&__button
+			height: 60px
+			font-size: 15px
+		&__police
+			font-size: 14px
+	.select
+		&_checked
+			height: 60px
+			line-height: 60px
+		&__dropdown
+			&-list
+				top: 60px

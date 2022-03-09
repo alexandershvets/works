@@ -1,0 +1,40 @@
+.banner-section {
+  // .banner-section__container
+  &__container {
+    @media (max-width: $md4 + px) {
+      padding: 0;
+      max-width: none;
+    }
+  }
+  // .banner-section__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md2 + px) {
+      flex-direction: column;
+    }
+  }
+  // .banner-section__slider
+  &__slider {
+    flex: 0 1 73%;
+    max-width: 73%;
+    @media (max-width: $md2 + px) {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+    @media (max-width: $md4 + px) {
+      margin-bottom: 25px;
+    }
+  }
+  // .banner-section__item
+  &__item {
+    flex: 0 1 23%;
+    max-width: 23%;
+    margin: 0 auto;
+    @media (max-width: $md2 + px) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}

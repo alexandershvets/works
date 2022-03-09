@@ -1,0 +1,31 @@
+.banner {
+  // .banner__container
+  &__container {
+    @media (max-width: $md3 + px) {
+      padding: 0;
+    }
+  }
+  // .banner__link
+  &__link {
+    display: block;
+    max-width: 1170px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media (max-width: $md4 + px) {
+      display: none;
+      text-align: center;
+      width: 100%;
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: $md4 + px) {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

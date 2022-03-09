@@ -1,0 +1,31 @@
+// HELPERS
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/null";
+
+// VENDOR (вендорные стили, например от плагинов)
+// @import "vendor/libs";
+
+// COMMON (основные базовые стили)
+@import "common/fonts";
+@import "common/main-grid";
+@import "common/general";
+
+// COMPONENTS (мелкие визуальные элементы)
+@import "components/forms";
+@import "components/ui";
+
+// CONNECTING MODULES (большие блоки. Шапка, футер, продукт)
+@import "modules/header";
+@import "modules/footer";
+@import "modules/banner-section";
+@import "modules/search";
+@import "modules/categories";
+@import "modules/products";
+@import "modules/banner";
+@import "modules/catalog";
+@import "modules/product-card";
+@import "modules/product-info";
+
+// PAGES (переопределение стилей отдельных страниц)
+@import "pages/home";

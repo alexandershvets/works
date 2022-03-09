@@ -1,0 +1,48 @@
+// FONTS LOAD SECTION
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: swap;
+  }
+}
+
+@include font("SFProDisplay-Regular", "SFProDisplay-Regular", "400", "normal");
+@include font("SFProDisplay-Medium", "SFProDisplay-Medium", "500", "normal");
+@include font("SFProDisplay-Semibold", "SFProDisplay-Semibold", "600", "normal");
+@include font("SFProDisplay-Bold", "SFProDisplay-Bold", "700", "normal");
+@include font("Barlow-Regular", "Barlow-Regular", "400", "normal");
+@include font("Barlow-Bold", "Barlow-Bold", "700", "normal");
+
+%sf-bold {
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%sf-semibold {
+  font-family: 'SFProDisplay-Semibold', sans-serif;
+  font-weight: 600;
+}
+
+%sf-medium {
+  font-family: 'SFProDisplay-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%sf-regular {
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%barlow-regular {
+  font-family: 'Barlow-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%barlow-bold {
+  font-family: 'Barlow-Bold', sans-serif;
+  font-weight: 700;
+}

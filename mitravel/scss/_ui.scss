@@ -1,0 +1,133 @@
+.btn {
+  display: inline-block;
+  padding: 32px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--color-white);
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+  color: var(--color-gableGreen);
+  &--center {
+    max-width: none;
+    text-align: center;
+  }
+  @media (max-width: $md4 + px) {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+.section-descr {
+  margin: 0 auto;
+  max-width: 650px;
+  font-family: "SFCompactText";
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-slateGray);
+  line-height: 24px;
+  text-align: center;
+}
+
+// IBG
+.ibg {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+body.ie {
+  .ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .ibg img {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// HIDDEN
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+// RESET BUTTON
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+// VIDEO
+.video {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.videobg {
+  video,
+  iframe,
+  object,
+  embed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+
+// ANIMATION
+._anim-show {
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: all .8s ease;
+}
+._anim-show._active,
+._active ._anim-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}

@@ -1,0 +1,15 @@
+@mixin adaptiv-text($minFontSize, $plusFontSize, $minWidth, $maxWidth) {
+	// (минимальный размер текста)
+	font-size: $minFontSize + rem;
+	// (минимальная ширина)
+	@media screen and (min-width: $minWidth + em) {
+		// (минимальный размер текста + максимальное прибавление (не трогаем - не трогаем) / (максимальная ширина - не трогаем))
+		font-size: calc(#{$minFontSize + rem} + #{$plusFontSize} * (100vw - #{$minWidth + rem}) / (#{$maxWidth} - #{$minWidth}));
+	}
+	// (максимальная ширина)
+	@media (min-width: $maxWidth) {
+		// (минимальный font-size + максимальное прибавление)
+		font-size: calc(#{$minFontSize + rem} + #{$plusFontSize});
+	}
+}
+// @include adaptiv-text(2, 10, 22, 100);

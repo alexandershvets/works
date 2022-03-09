@@ -1,0 +1,80 @@
+.catalog
+	&-block
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&__item
+			margin-bottom: 30px
+			margin: 0 auto 30px
+			max-width: 570px
+			height: 130px
+			position: relative
+			display: flex
+			flex-direction: column
+			box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+			overflow: hidden
+		&__image
+			height: 100%
+		&__tag
+			padding: 10px
+			position: absolute
+			top: 10px
+			left: 10px
+			font-size: 11px
+		&__buttons
+			position: absolute
+			bottom: 0
+			right: 0
+			display: flex
+			opacity: 0
+			transform: translateY(100%)
+			transition: 0.3s
+		&__fitting-button
+			border: 2px solid #fff
+			padding: 10px
+			font-size: 11px
+		&__add-button
+			background-color: lighten($primary, 10%)
+			border: 2px solid lighten($primary, 10%)
+			padding: 10px
+			font-size: 11px
+		&__like-button
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 8px
+	&__link
+		margin: 30px auto 0
+		text-align: center
+	&__link-more
+		display: inline-block
+		padding: 29px 30px
+		margin-bottom: 24px
+		font-size: 16px
+	&__description
+		display: block
+		font-size: 16px
+@media (max-width: 1200px)
+	.catalog
+		&-block
+			&__item
+				max-width: 470px
+@media (min-width: 768px)
+	.catalog
+		&-block
+			&__item
+				&:hover .catalog-block__buttons
+					opacity: 1
+					transform: translateY(0)
+@media (max-width: 768px)
+	.catalog
+		&-block
+			&__item
+			&__buttons
+				opacity: 1
+@media (max-width: 576px)
+	.catalog
+		&__link-more
+			
+			padding: 15px 10px
+			font-size: 14px

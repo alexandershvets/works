@@ -1,0 +1,143 @@
+.navbar
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: #fff
+	z-index: 99
+	&-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__mobile, &__landline
+		text-align: right
+	&__phone
+		display: block
+		margin-bottom: 5px
+		font-size: 19px
+		+bold
+		text-decoration: none
+		color: $phone-color
+	&__small-text
+		display: block
+		font-size: 14px
+		color: $text-color-light
+		text-decoration: none
+	&__button
+		padding: 17px 22px
+		font-size: 12px
+.menu
+	&__nav
+		position: fixed
+		top: 80px
+		width: 100%
+		background: $primary
+		transition: 0.2s
+		transform: translateY(-150%)
+		z-index: 99
+		opacity: 0
+	&_active
+		transform: translateY(0)
+		opacity: 1
+	&-list
+		display: flex
+		justify-content: space-around
+		margin: 0
+		padding: 16px 0
+		list-style: none
+		&__link
+			text-transform: uppercase
+			text-decoration: none
+			font-size: 17px
+			color: #ffffff
+	&-button
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background-color: transparent
+		border: none
+		border-right: 1px solid rgba(#510bba, 0.1)
+		border-left: 1px solid rgba(#510bba, 0.1)
+		height: 80px
+		width: 70px
+		cursor: pointer
+		&:focus
+			outline: none
+		&__line
+			position: relative
+			width: 20px
+			height: 3px
+			background-color: #507fe1
+			margin-bottom: 6px
+			&_active
+				height: 0
+				&:before
+					transform: translateY(8px) rotate(50deg)
+				&:after
+					transform: translateY(-9px) rotate(-50deg)
+			&:before
+				content: ''
+				position: absolute
+				top: -10px
+				left: 0
+				width: 20px
+				height: 3px
+				background-color: #507fe1
+				transition: 0.1s
+			&:after
+				content: ''
+				position: absolute
+				bottom: -10px
+				left: 0
+				width: 20px
+				height: 3px
+				background-color: #507fe1
+				transition: 0.1s
+.logo
+	&__text
+		display: block
+		font-size: 18px
+		margin-bottom: 5px
+		text-transform: uppercase
+		+bold
+		color: $logo-color
+	&__description
+		display: block
+		font-size: 14px
+		color: $logo-color-secondary
+
+@media (max-width: 992px)
+	.navbar
+		&__mobile, &__landline
+			display: none
+	.menu
+		&__nav
+			position: fixed
+			top: 80px
+			width: 100%
+			border-bottom: 1px solid $primary-hover
+			box-shadow: 1px 0px 5px 0px #000
+		&-list
+			flex-direction: column
+			padding: 20px 0 30px
+			&__item
+				text-align: center
+				margin-bottom: 13px
+				&:last-child
+					margin-bottom: 0
+@media (max-width: 576px)
+	.logo
+		display: none
+	.navbar
+		&__button
+			font-size: 10px
+	.menu
+		&-button
+			height: 60px
+			width: 60px
+		&__nav
+			top: 60px
+		&-list
+			&__link
+				font-size: 14px

@@ -1,0 +1,122 @@
+.become {
+  background-color: #fff;
+  // .become__container
+  &__container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    @media (max-width: $md2 + px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @media (max-width: $md3 + px) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    @media (max-width: $md4 + px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  // .become__title
+  &__title {
+    max-width: 50%;
+    margin-bottom: 95px;
+
+    // Анимация элемента
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all .8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 75%;
+    }
+    @media (max-width: $md4 + px) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.slider-become {
+  .swiper-container {
+    margin: 0 -15px;
+  }
+
+  .swiper-wrapper {
+    .swiper-slide {
+      transform: scale(0);
+      transition: all .8s ease 0s;
+    }
+    &._active {
+      .swiper-slide {
+        transform: scale(1);
+        @for $var from 1 to 5 {
+          $delay: $var * 0.2;
+          &:nth-child(#{$var
+          }) {
+            @if $var == 1 {
+              transition: transform .8s ease 0s;
+            } @else {
+              transition: transform .8s ease #{$delay + s};
+            }
+          }
+        }
+      }
+    }
+  }
+  // .slider-become__item
+  &__item {
+    position: relative;
+    display: block;
+    max-height: 554px;
+    margin: 0 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-neptune);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+    &:hover {
+      &::after {
+        opacity: .85;
+      }
+      .slider-become__text {
+        transform: translateY(0);
+      }
+    }
+  }
+  // .slider-become__image
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  // .slider-become__text
+  &__text {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    bottom: 0px;
+    padding: 0 53px 53px 53px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: var(--color-white);
+    transform: translateY(300px);
+    @media (max-width: 1200px) {
+      padding-left: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

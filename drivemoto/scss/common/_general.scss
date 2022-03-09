@@ -1,0 +1,33 @@
+// GENERAL DOCUMENT STYLES
+
+body {
+  @extend %sf-regular;
+  font-size: 100%;
+  font-size: $font-size;
+  color: $text-color;
+  line-height: $line-height;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &._lock {
+  	overflow: hidden;
+  	// @media (max-width: $md3 + px) {
+  	// 	width: 100%;
+  	// 	position: fixed;
+  	// 	overflow: hidden;
+  	// }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,28 @@
+:root {
+  // COLORS
+  --color-white: #fff;
+  --color-black: #000;
+  --color-neptune: #73afba;
+  --color-bostonBlue: #4196a6;
+  --color-burntSienna: #e8594e;
+  --color-scarlet: #e31d09;
+  --color-gableGreen: #1c2e3d;
+  --color-slateGray: #788692;
+  --color-mercury: #e3e3e3;
+  --color-rangoonGreen: #100e0b;
+  --color-aquaForest: #57a773;
+  --color-regentGray: #959ea6;
+
+  --accent-color: var(--color-burntSienna);
+  --accent-hover-color: var(--color-scarlet);
+
+  --accent-color-second: var(--color-neptune);
+  --accent-hover-color-second: var(--color-bostonBlue);
+
+  // FONTS
+  --font-family: "SFProDisplay", sans-serif;
+  --font-size: 15px;
+  --font-weight: 400;
+  --line-height: 1;
+  --text-color: var(--color-gableGreen);
+}
