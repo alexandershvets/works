@@ -1,0 +1,40 @@
+# генеральные настройки
+title: GeekTOP - Новости из мира IT
+name: GeekTOP
+description: Новости электроники, технологий, современных гаджетов, и другая актуальная информация современной IT индустрии
+
+# базовые настройки
+themecolor: '#202225'
+imagehome: img/geektop.jpg
+url: 'http://geektop.ru'
+baseurl: '/'
+
+# настройки плагина
+plugins: [jekyll-paginate-v2]
+category_dir: blog # должен быть установлен плагин jekyll-paginate-v2
+pagination:
+  enabled: true  # включить да\нет
+  per_page: 9  # сколько выводить на странице айтемов
+  title: ':title - Страница :num' #title на странице пагинации
+  limit: 0
+  sort_field: 'date'  # чтобы самые свежие посты в категории были вверху
+  sort_reverse: true #
+  trail:
+    before: 2
+    after: 2
+
+# исключаемые файлы из генерации сайта
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'js/common.js', 'npm-debug.log', '**/Thumbs.db', 'libs', 'sass', '**/*.DS_Store']
+
+# дополнительная кастомная настройка, где перечисленны соц.сети
+soc:
+  <ul>
+    <li><a href="#"><i class="fa fa-vk"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="rss.xml"><i class="fa fa-rss"></i></a></li>
+  </ul>
+
+# кастомный параметр копирайта
+copyright: Копирование контента и размещение на других сайтах запрещено.
